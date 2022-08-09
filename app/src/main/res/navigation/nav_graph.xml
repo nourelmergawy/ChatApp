@@ -7,17 +7,25 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.mrg.chatapp.SignInFragment"
+        android:name="com.mrg.chatapp.Fragment.MessagesFragment"
         android:label="fragment_sign_in"
-        tools:layout="@layout/fragment_sign_in" />
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.mrg.chatapp.SignUpFragment"
+        android:name="com.mrg.chatapp.Fragment.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/messagesFragment"
-        android:name="com.mrg.chatapp.MessagesFragment"
+        android:name="com.mrg.chatapp.Fragment.MessagesFragment"
         android:label="fragment_messages"
         tools:layout="@layout/fragment_messages" />
 </navigation>
